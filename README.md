@@ -12,9 +12,11 @@ Guides, repositories, and community resources can remain online after the inform
 
 Technocore Drift Check looks for that gap.
 
-## Current Check
+## Current Checks
 
-The first check tracks this claim:
+### 1. MCP availability
+
+Tracked claim:
 
 ```text
 "no MCP server"
@@ -22,10 +24,21 @@ The first check tracks this claim:
 
 A community resource still contains that statement, while the current official Technocore repository documents an MCP server.
 
-Result:
+```text
+Verdict: STALE
+```
+
+### 2. MCP tool count
+
+Tracked claim:
 
 ```text
-Claim:   "no MCP server"
+"Technocore MCP has 9 tools"
+```
+
+A public third-party source still reports 9 tools, while the current official Technocore repository documents 13 tools.
+
+```text
 Verdict: STALE
 ```
 
@@ -90,5 +103,10 @@ No third-party Python packages are required.
 ## Status
 
 Early version focused on real Technocore documentation drift.
+
+Current checks cover:
+
+- MCP availability
+- MCP tool count
 
 More checks can be added as the ecosystem evolves.
