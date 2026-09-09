@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Technocore Drift Monitor</title>
+
+  <meta
+    name="description"
+    content="A deterministic monitor for stale Technocore claims and source drift."
+  >
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+  rel="stylesheet"
+>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">F</div>
+
+        <div>
+          <div class="brand-name">FRIGG / TECHNOCORE</div>
+          <div class="brand-subtitle">DRIFT MONITOR</div>
+        </div>
+      </div>
+
+      <div class="top-actions">
+
+  <button
+    class="theme-toggle"
+    id="theme-toggle"
+    type="button"
+    aria-label="Toggle color theme"
+  >
+    <span id="theme-icon">◐</span>
+    <span id="theme-label">DARK</span>
+  </button>
+
+  <div class="live-indicator">
+    <span class="live-dot"></span>
+    PUBLIC SOURCE MONITOR
+  </div>
+
+</div>
+    </header>
+
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">TECHNOCORE DOCUMENTATION INTELLIGENCE</p>
+
+        <h1>
+          Catch ecosystem info
+          <span>before it goes stale.</span>
+        </h1>
+
+        <p class="hero-description">
+          Tracks public Technocore claims against current official sources
+          and surfaces documentation drift with deterministic checks.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#checks" class="button button-primary">
+            View active checks
+          </a>
+
+          <a
+            href="https://github.com/oxfrigg/technocore-drift-check"
+            class="button button-secondary"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-note">
+        <span class="note-label">HOW IT WORKS</span>
+
+        <p>
+          Public claim → official evidence → deterministic rule → verdict.
+        </p>
+
+        <span class="no-ai">NO AI JUDGMENT</span>
+      </div>
+    </section>
+
+
+    <section class="metrics" aria-label="Monitor overview">
+
+      <article class="metric-card">
+        <span class="metric-label">ACTIVE CHECKS</span>
+        <strong id="active-checks">2</strong>
+        <span class="metric-foot">tracked claims</span>
+      </article>
+
+      <article class="metric-card">
+        <span class="metric-label">STALE</span>
+        <strong id="stale-count">2</strong>
+        <span class="metric-foot">current verdicts</span>
+      </article>
+
+      <article class="metric-card">
+        <span class="metric-label">SOURCES</span>
+        <strong id="source-count">3</strong>
+        <span class="metric-foot">public endpoints</span>
+      </article>
+
+      <article class="metric-card">
+        <span class="metric-label">MODE</span>
+        <strong class="metric-word">READ ONLY</strong>
+        <span class="metric-foot">no signing / writes</span>
+      </article>
+
+    </section>
+
+
+    <section class="section" id="checks">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ACTIVE MONITOR</p>
+          <h2>Current drift checks</h2>
+        </div>
+
+        <span class="section-count">02 CHECKS</span>
+      </div>
+
+
+      <div class="checks-grid">
+
+        <article class="check-card">
+          <div class="check-top">
+            <div>
+              <span class="check-number">01</span>
+              <h3>MCP availability</h3>
+            </div>
+
+            <span class="status status-stale">STALE</span>
+          </div>
+
+          <div class="claim-block">
+            <span class="small-label">TRACKED CLAIM</span>
+            <p>"no MCP server"</p>
+          </div>
+
+          <div class="evidence-row">
+            <div>
+              <span class="small-label">OBSERVED</span>
+              <strong>No MCP server</strong>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div>
+              <span class="small-label">OFFICIAL</span>
+              <strong>MCP available</strong>
+            </div>
+          </div>
+
+          <div class="source-line">
+            Evidence:
+            <a
+              href="https://github.com/flop-labs/technocore-chat"
+              target="_blank"
+              rel="noreferrer"
+            >
+              flop-labs/technocore-chat ↗
+            </a>
+          </div>
+        </article>
+
+
+        <article class="check-card">
+          <div class="check-top">
+            <div>
+              <span class="check-number">02</span>
+              <h3>MCP tool count</h3>
+            </div>
+
+            <span class="status status-stale">STALE</span>
+          </div>
+
+          <div class="claim-block">
+            <span class="small-label">TRACKED CLAIM</span>
+            <p>"Technocore MCP has 9 tools"</p>
+          </div>
+
+          <div class="evidence-row">
+            <div>
+              <span class="small-label">OBSERVED</span>
+              <strong>9 tools</strong>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div>
+              <span class="small-label">OFFICIAL</span>
+              <strong>13 tools</strong>
+            </div>
+          </div>
+
+          <div class="source-line">
+            Evidence:
+            <a
+              href="https://github.com/flop-labs/technocore-chat"
+              target="_blank"
+              rel="noreferrer"
+            >
+              flop-labs/technocore-chat ↗
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section class="section sources-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EVIDENCE</p>
+          <h2>Sources monitored</h2>
+        </div>
+      </div>
+
+      <div class="source-list">
+
+        <div class="source-item">
+          <span class="source-status"></span>
+
+          <div>
+            <strong>flop-labs / technocore-chat</strong>
+            <span>official source</span>
+          </div>
+
+          <span class="source-type">GITHUB</span>
+        </div>
+
+        <div class="source-item">
+          <span class="source-status"></span>
+
+          <div>
+            <strong>awesome-technocore</strong>
+            <span>community source</span>
+          </div>
+
+          <span class="source-type">GITHUB</span>
+        </div>
+
+        <div class="source-item">
+          <span class="source-status"></span>
+
+          <div>
+            <strong>PolicyLayer</strong>
+            <span>third-party source</span>
+          </div>
+
+          <span class="source-type">WEB</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <footer>
+      <span>TECHNOCORE DRIFT MONITOR</span>
+
+      <span>
+        built by
+        <a
+          href="https://github.com/oxfrigg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          0xfrigg ↗
+        </a>
+      </span>
+    </footer>
+
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
