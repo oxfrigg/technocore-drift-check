@@ -110,3 +110,7 @@ Current checks cover:
 - MCP tool count
 
 More checks can be added as the ecosystem evolves.
+## Provenance
+
+Builder identity and Technocore DID provenance are documented in
+[`PROVENANCE.md`](PROVENANCE.md).
