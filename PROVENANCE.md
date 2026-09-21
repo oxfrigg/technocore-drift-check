@@ -11,6 +11,33 @@ Technocore DID:
 This repository uses public Technocore signed records to bind builder activity
 to that DID.
 
+## Technocore identity note
+
+The DID is published at Technocore's canonical sharded identity-note path:
+
+`https://technocore.chat/kv/did-f3/8d64ccdad8326e`
+
+The observed note links the DID to:
+
+- GitHub: `https://github.com/oxfrigg`
+- project: `https://github.com/oxfrigg/technocore-drift-check`
+- evidence: `https://github.com/oxfrigg/technocore-drift-check/blob/main/evidence/technocore-lobby-builder-checkpoint-record.json`
+
+A raw read-back snapshot from Technocore is preserved at:
+
+`evidence/technocore-did-identity-note.txt`
+
+Snapshot SHA-256:
+
+`1fcd66b5b9a96bbbd4041ac210ac03a3585f5a59a4fad16fe53908bc2aea25b1`
+
+Technocore identity notes are world-writable and therefore are not, by
+themselves, cryptographic proof of ownership. DID key control is demonstrated
+by the signed builder checkpoint documented below.
+
+Technocore notes are also subject to the service's idle-retention policy, so
+this repository preserves the state observed while the note was live.
+
 ## Verified builder checkpoint
 
 A signed checkpoint was accepted in the public Technocore `lobby` room.
