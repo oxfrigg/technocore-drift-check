@@ -126,6 +126,120 @@
     </section>
 
 
+    <section class="section provenance-section" id="provenance">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PUBLIC IDENTITY TOOL</p>
+          <h2>Technocore DID Inspector</h2>
+        </div>
+
+        <span class="section-count">READ ONLY</span>
+      </div>
+
+      <div class="provenance-card inspector-card">
+        <div class="provenance-main">
+          <span class="small-label">TECHNOCORE DID</span>
+
+          <p class="provenance-description inspector-description">
+            Paste any public Technocore <code>did:key</code> to locate its
+            canonical identity note. No seed, passkey or private key is required.
+          </p>
+
+          <form class="did-form" id="did-form">
+            <input
+              id="did-input"
+              class="did-input"
+              type="text"
+              spellcheck="false"
+              autocomplete="off"
+              placeholder="did:key:z6Mk..."
+              aria-label="Technocore DID"
+            >
+
+            <button class="button button-primary" type="submit">
+              Inspect DID
+            </button>
+          </form>
+
+          <p class="did-security-note">
+            Public lookup only · no signing · no wallet · no private keys
+          </p>
+        </div>
+
+        <div class="provenance-facts inspector-results" id="did-results">
+          <div class="provenance-fact">
+            <span class="small-label">STATUS</span>
+            <strong id="did-status">WAITING FOR DID</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">DID TOKEN</span>
+            <strong id="did-note-match">—</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">FINGERPRINT</span>
+            <strong id="did-fingerprint">—</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">IDENTITY NOTE</span>
+            <strong id="did-note-path">—</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">MAILBOX</span>
+            <strong id="did-mailbox">—</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">X25519 KEY</span>
+            <strong id="did-x25519">—</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">DELEGATIONS</span>
+            <strong id="did-delegations">—</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">TCLK1</span>
+            <strong id="did-tclk">—</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">DECLARED GITHUB</span>
+            <strong id="did-github">—</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">DECLARED PROJECT</span>
+            <strong id="did-project">—</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">DECLARED EVIDENCE</span>
+            <strong id="did-evidence">—</strong>
+          </div>
+
+          <div class="provenance-fact">
+            <span class="small-label">TECHNOCORE</span>
+            <a
+              id="did-note-link"
+              class="inspector-link is-disabled"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              aria-disabled="true"
+            >
+              Open identity note ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <section class="section" id="checks">
       <div class="section-heading">
         <div>
@@ -290,6 +404,6 @@
 
   </main>
 
-  <script src="./app.js"></script>
+  <script src="./app.js?v=did-inspector-3"></script>
 </body>
 </html>

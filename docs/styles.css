@@ -1099,3 +1099,149 @@ footer a {
     gap: 8px;
   }
 }
+/* provenance */
+
+.provenance-section {
+  padding-top: 72px;
+}
+
+.provenance-verified {
+  color: var(--green);
+  border-color: color-mix(in srgb, var(--green) 32%, transparent);
+  background: var(--green-soft);
+}
+
+.provenance-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, .8fr);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background:
+    radial-gradient(
+      80% 120% at 0% 0%,
+      var(--frigg-soft),
+      transparent 52%
+    ),
+    var(--card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.provenance-main {
+  padding: 28px;
+}
+
+.did-value {
+  display: block;
+  margin-top: 12px;
+  padding: 14px 15px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--raised);
+  color: var(--frigg);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.provenance-description {
+  max-width: 650px;
+  margin: 20px 0 0;
+  color: var(--text2);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.provenance-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.provenance-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-left: 1px solid var(--line);
+}
+
+.provenance-fact {
+  min-height: 130px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.provenance-fact:nth-child(2n) {
+  border-right: 0;
+}
+
+.provenance-fact:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.provenance-fact strong {
+  max-width: 100%;
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  overflow-wrap: anywhere;
+}
+
+.fact-status {
+  padding: 3px 7px;
+  border: 1px solid
+    color-mix(in srgb, var(--green) 30%, transparent);
+  border-radius: 5px;
+  background: var(--green-soft);
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 900px) {
+  .provenance-card {
+    grid-template-columns: 1fr;
+  }
+
+  .provenance-facts {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 620px) {
+  .provenance-main {
+    padding: 20px;
+  }
+
+  .provenance-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .provenance-fact {
+    min-height: 105px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .provenance-fact:nth-last-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .provenance-fact:last-child {
+    border-bottom: 0;
+  }
+
+  .provenance-actions {
+    flex-direction: column;
+  }
+}
